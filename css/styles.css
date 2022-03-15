@@ -230,7 +230,7 @@ ul.show{
 	flex-wrap: wrap;
 	justify-content: center;
 
-	background-color: #0E3687;
+	background: linear-gradient(to bottom, #9FF989, #0E3687);
 }
 
 .content2__img{
@@ -247,9 +247,11 @@ ul.show{
 /* ASIDE --> (INDEX.HTML) MOBILE FIRST */
 
 .asideGrid{
-	background-color: #0E3687;
+	background: linear-gradient(to top, #9FF989, #0E3687);
 
-	border: 3px solid #9FF989;
+	border-width: 0 0;
+	border-style: solid;
+	border-color: #0E3687;
 	padding: 12px;
 }
 
@@ -279,6 +281,7 @@ ul.show{
 	padding: 6px;
 
 	text-shadow: 1px 2px #000;
+
 }
 
 .prot__article{
@@ -307,6 +310,21 @@ ul.show{
 	width: 120px;
 	margin: 8px 8px;
 	border-radius: 50%;
+
+	animation-name: movement;
+	animation-iteration-count: 1;
+	animation-duration: 1.4s;
+}
+
+@keyframes movement{
+	0%{
+		transform: translateX(-450px);
+	}
+
+	100%{
+		transform: translateX(0);
+	}
+
 }
 
 .prot__text{
@@ -374,6 +392,9 @@ ul.show{
 
 .gallery__img:hover{
 	outline: 2px solid #fff;
+
+	transform: scale(1.08);
+	transition: transform .6s;
 }
 
 /* MAIN --> (CONTACTO.HTML) MOBILE FIRST */
@@ -587,6 +608,12 @@ ul.show{
 		width: 50%;
 	}
 
+/* MAIN SEGUNDA SECCIÓN --> (INDEX.HTML) DESKTOP */
+
+	.content2__div{
+		background: linear-gradient(to left, #0E3687, #9FF989);
+	}
+
 /* ASIDE --> (INDEX.HTML) DESKTOP */
 
 	.asideSection{
@@ -595,6 +622,8 @@ ul.show{
 	}
 
 	.asideGrid{
+		background: linear-gradient(to bottom, #9FF989, #0E3687, #9FF989);
+
 		border-width: 0px 3px;
 		border-style: solid;
 		border-color: #9FF989;
