@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&family=Roboto:wght@300;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;;
+	box-sizing: border-box;
+}
+
+/* GRID LAYOUT PARA EL INDEX.HTML SOLAMENTE */
+
+.body{
+	display: grid;
+	grid-template-rows: 76px repeat(3, auto);
+	grid-template-columns: 100%;
+	grid-template-areas: 
+		"header header" 
+		"main main"
+		"aside aside" 
+		"footer footer";
+	}
+
+.headerGrid{
+	grid-area: header;
+
+	width: 100%;
+	position: fixed;
+
+	z-index: 1;
+}
+
+.mainGrid{
+	grid-area: main;
+}
+
+.asideGrid{
+	grid-area: aside;
+}
+
+.footerGrid{
+	grid-area: footer;
+
+	background-image: url(../img/footer.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+/* GRID LAYOUT PARA TODOS LOS .HTML (MENOS PARA EL INDEX) */
+
+.body2{
+	display: grid;
+	grid-template-rows: 76px repeat(2, auto);
+	grid-template-columns: 100%;
+	grid-template-areas: 
+		"header header" 
+		"main main" 
+		"footer footer";
+}
+
+.main{
+	grid-area: main;
+}
+
+/* NAVEGACIÓN --> (PARA TODOS LOS HTML POR IGUAL) MOBILE FIRST */
+
+.btn__menu{
+	display: inline-flex;
+}
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 10px 16px;
+
+	background-color: #9FF989;
+}
+
+.menu__logo{
+	max-width: 10rem;
+}
+
+.menu__items{
+	position: fixed;
+	width: 100vw;
+	background-color: #9FF989;
+	top: -100vh;
+	text-align: center;
+
+	margin: 20px 0 0 0;
+	
+	line-height: 50px;
+	list-style: none;
+}
+
+.menu__items li a{
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: #1176D5;
+}
+
+.menu__items a:hover, .menu__items a:active{
+	color: #72DFFD;
+	font-size: 1.4em;
+
+	text-shadow: 2px 2px black;
+	text-transform: uppercase;
+}
+
+ul.show{
+	top: 57px;
+	right: 0px;
+}
+
+.btn__menu{
+	font-size: 2rem;
+	color: #1176D5;
+	cursor: pointer;
+}
+
+/* FOOTER --> (PARA TODOS LOS HTML POR IGUAL) MOBILE FIRST */
+
+.footer__title{
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 1rem;
+
+	padding: 6px;
+
+	color: #1176D5;
+	background-color: #9FF989;
+}
+
+.contact__h3{
+	text-align: center;
+	font-size: .8rem;
+	letter-spacing: 3px;
+	color: #F7FBF6;
+}
+
+.footer__links{
+	display: flex;
+	justify-content: center;
+}
+
+.footer__img{
+	width: 100%;
+}
+
+.footer__img:hover{
+	border: 2px solid #fff;
+	border-radius: 10px;
+}
+
+.contact__link{
+	padding: 0px 10px 2px;
+
+	color: #fff;
+	font-size: .6rem;
+	text-decoration: none;
+}
+
+.contact__link:hover{
+	text-decoration: line-through;
+	color: red;
+}
+
+/* MAIN --> (INDEX.HTML) MOBILE FIRST */
+
+.main__content{
+	background-image: url(../img/mainbg.jpg);
+	background-size: cover;
+	background-position: center;
+
+	padding: 16px;
+}
+
+.main__contentDiv{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.maincontentDiv--show{
+	display: none;
+}
+
+.main_contentParrafe{
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+
+	background-image: url(../img/main__p.jpg);
+	background-size: cover;
+	background-position: center;
+
+	color: #fff;
+	text-shadow: 1px 2px black;
+}
+
+.main__contentDiv iframe{
+	width: 100%;
+}
+
+/* MAIN SEGUNDA SECCIÓN --> (INDEX.HTML) MOBILE FIRST */
+
+.content2{
+	background-color: #9FF989;
+	text-align: center;
+
+	padding: 6px 2px;
+}
+
+.content2__title{
+	letter-spacing: 2px;
+	font-size: 1rem;
+	color: #1176D5;
+}
+
+.content2__subtitle{
+	letter-spacing: 2px;
+	font-size: .8rem;
+	color: #fff;
+	text-shadow: 1px 2px black;
+}
+
+.content2__div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	background-color: #0E3687;
+}
+
+.content2__img{
+	width: 250px;
+	height: 250px;
+
+	margin: 8px;
+	border-radius: 8px;
+
+	flex-grow: 1;
+}
+
+
+/* ASIDE --> (INDEX.HTML) MOBILE FIRST */
+
+.asideGrid{
+	background-color: #0E3687;
+
+	border: 3px solid #9FF989;
+	padding: 12px;
+}
+
+.asideSection{
+	height: 100%;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+.asideGrid img{
+	max-width: 30%;
+	opacity: .9;
+}
+
+/* MAIN --> (PROTAGONISTAS.HTML) MOBILE FIRST */ /* << ------ >> */ /* Gallery = galeria.html (Para ahorrar código)*/
+
+.prot__title, .gallery__title{
+	background-image: url(../img/protagonistas.jpg);
+	background-size: cover;
+	background-position: center;
+
+	color: #F7FBF6;
+	text-align: center;
+	font-size: 1rem;
+	letter-spacing: 4px;
+	padding: 6px;
+
+	text-shadow: 1px 2px #000;
+}
+
+.prot__article{
+	background-image: url(../img/protagonistasbg.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.protDiv picture{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.prot__name{
+	width: 100%;
+	position: sticky;
+	top: 4.5rem;
+
+	padding: 4px;
+	background-color: #9FF989;
+	text-align: center;
+}
+
+.prot__img{
+	width: 120px;
+	margin: 8px 8px;
+	border-radius: 50%;
+}
+
+.prot__text{
+	display: inline-block;
+	width: 90%;
+
+	padding: 8px 0;
+	vertical-align: 1rem;
+	color: #fff;
+}
+
+/* MAIN --> (EPISODIOS.HTML) MOBILE FIRST */
+
+.caps{
+	overflow: auto;
+
+	background-image: url(../img/episodios.jpg);
+	background-size: cover;
+	background-position: top;
+
+	padding: 20px 0;
+}
+
+.table{
+	height: 250px;
+	border: 1px solid #000;
+
+	background-color: #BEEF25;
+}
+
+.table th{
+	padding: 10px;
+
+	letter-spacing: 2px;
+}
+
+.table td{
+	padding: 4px;
+	border-radius: 2px;
+
+	text-align: center;	
+}
+
+/* MAIN --> (GALERIA.HTML) MOBILE FIRST */
+
+.gallery{
+	background-color: #BCEFB0;
+}
+
+.galleryFlex{
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gallery__img{
+	width: 250px;
+	height: 200px;
+	margin: 10px 10px;
+
+	flex-shrink: 1;
+	border-radius: 16px;
+}
+
+.gallery__img:hover{
+	outline: 2px solid #fff;
+}
+
+/* MAIN --> (CONTACTO.HTML) MOBILE FIRST */
+
+.formulario{
+	padding: 20px;
+
+	background-image: url(../img/formbg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.form__fieldset{
+	border: 2px solid whitesmoke;
+	padding: 10px;
+}
+
+.formulario__title{
+	color: #1176D5;
+
+	font-size: .9rem;
+	margin-left: 10px;
+}
+
+.formulario__input{
+	display: block;
+	height: 3rem;
+	width: 100%;
+
+	margin: 16px auto;
+
+	background-color: #B6FAA5;
+}
+
+.edit{
+	resize: none;
+	width: 100%;
+	height: 200px;
+}
+
+.formulario__input:focus{
+	outline: none;
+}
+
+/* --------------------------------------------{ @MEDIA QUERIE PARA TABLET }-------------------------------------------- */
+
+@media screen and (min-width: 768px){
+
+/* FOOTER --> (PARA TODOS LOS HTML POR IGUAL) TABLET */
+
+	.footer__title{
+		font-size: 1.6rem;
+	}
+
+	.contact__h3{
+		font-size: 1.2rem;
+	}
+
+	.contact__link{
+		font-size: .8rem;
+	}
+
+/* MAIN --> (PARA TODOS LOS HTML POR IGUAL) TABLET */
+
+	.main__contentDiv iframe{
+		width: 80%;
+	}
+
+	.main_contentParrafe{
+		width: 60%;
+	}
+
+/* MAIN SEGUNDA SECCIÓN--> (PARA TODOS LOS HTML POR IGUAL) TABLET */
+
+	.content2__title{
+		font-size: 1.8rem;
+	}
+
+	.content2__subtitle{
+		letter-spacing: 4px;
+		font-size: 1rem;
+	}
+
+/* MAIN --> (PROTAGONISTAS.HTML) TABLET */ /* << ------ >> */ /* Gallery = galeria.html (Para ahorrar código)*/
+
+	.prot__title, .gallery__title{
+		font-size: 1.6rem;
+	}
+
+	.protDiv picture{
+		flex-direction: row;
+	}
+
+/* MAIN --> (EPISODIOS.HTML) TABLET */
+	
+	.caps{
+		padding: 20px;
+
+		display: flex;
+		justify-content: center;
+	}
+
+/* MAIN --> (GALERIA.HTML) TABLET */
+
+	.galleryFlex{
+		display: flex;
+
+		flex-wrap: no-wrap;
+	}
+
+	.gallery__img{
+		width: 30%;
+		flex-shrink: 0;
+		border-radius: 16px;
+	}
+
+/* MAIN --> (CONTACTO.HTML) TABLET */
+
+	.formulario__title{
+		color: #1176D5;
+
+		font-size: 1.2rem;
+		margin-left: 6px;
+	}
+
+	.formularioNE{
+		display: inline-block;
+	}
+
+	.formularioNE{
+		width: 100%;
+		text-align: center;
+	}
+
+	.formulario__input{
+		width: 250px;
+	}
+
+	.inputEDIT{
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	.edit{
+		resize: none;
+		width: 50%;
+		height: 200px;
+	}
+
+}
+
+/* --------------------------------------------{ @MEDIA QUERIE PARA DESKTOP }-------------------------------------------- */
+
+@media screen and (min-width: 1024px){
+
+/* GRID LAYOUT PARA INDEX.HTML (ÚNICO QUE CONTIENE "ASIDE") LOS DEMÁS NO TIENEN NECESIDAD DE GRID */
+
+	.body{
+		grid-template-rows: 76px repeat(2, auto);
+		grid-template-columns: 90% 10%;
+		grid-template-areas: "header header" "main aside" "footer footer";
+	}
+
+/* NAVEGACIÓN --> (PARA TODOS LOS HTML POR IGUAL) DESKTOP */
+
+	.btn__menu{
+		display: none;
+	}
+
+	.menu__items{
+		display: flex;
+		position: static;
+
+		width: auto;
+		margin: 0;
+		
+		line-height: 1;
+	}
+
+	.menu__items li a{
+		display: inline-block;
+		margin-right: 16px;
+
+		font-size: 1.3rem;
+	}
+
+	ul.show{
+		top: 0;
+	}
+
+/* MAIN --> (INDEX.HTML) DESKTOP */
+
+	.main__contentDiv{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.maincontentDiv--show{
+		display: flex;
+	}
+
+	.main__contentDiv{
+		padding: 20px;
+	}
+
+	.main_contentParrafe{
+		width: 40%;
+	}
+
+	.main__contentDiv iframe{
+		width: 50%;
+	}
+
+/* ASIDE --> (INDEX.HTML) DESKTOP */
+
+	.asideSection{
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.asideGrid{
+		border-width: 0px 3px;
+		border-style: solid;
+		border-color: #9FF989;
+	}
+
+	.asideGrid img{
+		max-width: 100%;
+	}
+
+/* MAIN --> (PROTAGONISTAS.HTML) DESKTOP */  
+
+	.prot__name{
+		text-align: left;
+	}
+
+}
