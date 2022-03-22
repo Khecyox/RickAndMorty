@@ -4,86 +4,148 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rick And Morty</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- My Css -->
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="https://kit.fontawesome.com/bc28818a66.js" crossorigin="anonymous"></script>
-	<script src="js/app.js" defer></script>
+
+	<!-- <script src="https://kit.fontawesome.com/bc28818a66.js" crossorigin="anonymous"></script>
+	<script src="js/app.js" defer></script> -->
 
 </head>
-<body class="body">
+<body>
+
+	<!-- Nav -->
 	
-	<header class="headerGrid">
-			<nav class="menu">
-				<a href="index.html">
-					<img src="img/logo.png" class="menu__logo" alt="Logo Rick and Morty">
-				</a>
-				<ul class="menu__items">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="protagonistas.html">Protagonistas</a></li>
-					<li><a href="episodios.html">Episodios</a></li>
-					<li><a href="galeria.html">Galería</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
-				</ul>
-				<span class="btn__menu">
-					<i class="fa fa-bars"></i>
-				</span>
-			</nav>
+	<header class="fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light" id="botonera">
+		  	<div class="container-fluid">
+		    	<a class="navbar-brand" href="#">
+		    		<img src="img/Logo.png" alt="Rock & Roll">
+		    	</a>
+		    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      		<span class="navbar-toggler-icon"></span>
+		    	</button>
+		    	<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+		      	<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+		      		<li class="nav-item">
+		          		<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link active" aria-current="page" href="protagonistas.html">Protagonistas</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link" href="galeria.html">Galería</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link" href="episodios.html">Episodios</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link" href="contacto.html">Contacto</a>
+		        	</li>
+		    	</div>
+		  	</div>
+		</nav>
 	</header>
 
-	<main class="mainGrid">
-		<section class="main__content">
-			<div class="main__contentDiv maincontentDiv--show">
-				<p class="main_contentParrafe">Rick acaba de mudarse a casa de su hija Beth y allí recuerda que tiene un nieto llamado Morty . Sin preguntar a nadie, decide que va a obligarle a que le acompañe a todo tipo de aventuras para que el chico se vuelva inteligente como él y no se convierta en un idiota como Jerry, padre de Morty y yerno de Rick .</p>
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fUMW7wQ0cJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<div class="main__contentDiv">
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uxneJzoKDQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<p class="main_contentParrafe">La quinta temporada sigue al viejo científico Rick en sus locas y sorprendentes aventuras junto a su nieto Morty. Entre ellas, se enfrentarán a un inédito némesis de Rick que amenazara la vida en la Tierra por lo que el científico tiene un plan retorcido... ¿O acabarán siendo los Smith reales?</p>
-			</div>
-		</section>
+	<!-- End Nav -->
 
-		<section>
-			<div class="content2">
-				<h1 class="content2__title">Rick And Morty</h1>
-				<h2 class="content2__subtitle">Algunas imagenes de sus aventuras</h2>
-			</div>
-			<div class="content2__div">
-				<img class="content2__img" src="img/Aventura1.jpg" alt="Rick en paz con la naturaleza">
-				<img class="content2__img" src="img/Aventura2.jpg" alt="Rick y Morty atrapados">
-				<img class="content2__img" src="img/Aventura3.png" alt="Rick y Morty en la lluvia ácida">
-				<img class="content2__img" src="img/Aventura4.png" alt="Rick y Morty rapeando">
-			</div>
-		</section>
+	<!-- Main Mobile -->
+
+	<main class="MainCarousel d-lg-none">
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+		  	<div class="carousel-indicators">
+		    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		    	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		  	</div>
+		  	<div class="carousel-inner">
+		    	<div class="carousel-item active">
+		      		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fUMW7wQ0cJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="d-block w-100"></iframe>
+		    	</div>
+		    	<div class="carousel-item">
+		      		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uxneJzoKDQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="d-block w-100"></iframe>
+		   		</div>
+		  	</div>
+		  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    	<span class="visually-hidden">Previous</span>
+		  	</button>
+		  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    	<span class="visually-hidden">Next</span>
+		  	</button>
+		</div>
 	</main>
 
-	<aside class="asideGrid">
-		<section class="asideSection">
-			<img src="img/Aside1.png" alt="Rick Sanchez escapando">
-			<img src="img/Aside2.png" alt="Rick disgustado">
-			<img src="img/Aside3.png" alt="Fuck you Rick portal">
-		</section>
-	</aside>
+	<!-- End Main -->
 
-	<footer class="footerGrid">
-		<h2 class="footer__title">Afiliados & Redes Sociales</h2>
-		<section class="footer__section">
-			<div class="footer__contact">
-				<h3 class="contact__h3 contact__h3--margin">Empresas afiliadas</h3>
-				<div class="footer__links">
-					<a href="https://www.hostinger.com/" target="_blank"><img src="img/Empresa1.png" class="footer__img" alt="Hostinger"></a>
-					<a href="https://www.nationalgeographic.com/" target="_blank"><img src="img/Empresa2.png" class="footer__img" alt="National Geographic"></a>
-					<a href="https://www.coca-cola.com.ar/" target="_blank"><img src="img/Empresa3.png" class="footer__img" alt="Coca Cola"></a>
-					<a href="https://www.hbomax.com/" target="_blank"><img src="img/Empresa4.png" class="footer__img" alt="HBO max"></a>
+	<!-- Main Desktop -->
+
+	<main class="Main">
+		<section class="d-none d-lg-block row w-100 m-0" id="MainBg">
+			<div class="d-flex justify-content-between col-12 p-4">
+				<p class="w-50 align-self-center me-3 p-2">Rick acaba de mudarse a casa de su hija Beth y allí recuerda que tiene un nieto llamado Morty . Sin preguntar a nadie, decide que va a obligarle a que le acompañe a todo tipo de aventuras para que el chico se vuelva inteligente como él y no se convierta en un idiota como Jerry, padre de Morty y yerno de Rick.</p>
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fUMW7wQ0cJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="d-flex justify-content-between col-12 p-4">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uxneJzoKDQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p class="w-50 align-self-center ms-3 p-2">La quinta temporada sigue al viejo científico Rick en sus locas y sorprendentes aventuras junto a su nieto Morty. Entre ellas, se enfrentarán a un inédito némesis de Rick que amenazara la vida en la Tierra por lo que el científico tiene un plan retorcido... ¿O acabarán siendo los Smith reales?</p>
+			</div>
+		</section>
+
+		<section class="">
+			<div class="text-center Sectionbg">
+				<h1 class="fs-2 mb-1">Rick And Morty</h1>
+				<h2 class="fs-6 m-0 pb-2">Algunas imagenes de sus aventuras</h2>
+			</div>
+			<div class="row w-100 m-0">
+				<img class="col-12 col-sm-6 col-lg-3 p-0" src="img/Aventura1.jpg" alt="Rick en paz con la naturaleza">
+				<img class="col-12 col-sm-6 col-lg-3 p-0" src="img/Aventura2.jpg" alt="Rick y Morty atrapados">
+				<img class="col-12 col-sm-6 col-lg-3 p-0" src="img/Aventura3.png" alt="Rick y Morty en la lluvia ácida">
+				<img class="col-12 col-sm-6 col-lg-3 p-0" src="img/Aventura4.png" alt="Rick y Morty rapeando">
+			</div>
+		</section>
+
+	</main>
+		
+	<!-- End Main Desktop -->
+
+	<!-- Footer -->
+
+	<footer class="text-center footer">
+		<h2 class="fs-3 p-1">Afiliados & Redes Sociales</h2>
+		<section>
+			<div>
+				<h3 class="fs-5 mb-1 p-0 footer__h3">Empresas afiliadas</h3>
+				<div class="row d-flex justify-content-center w-100">
+					<a href="https://www.hostinger.com/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa1.png" alt="Hostinger" class="w-100">
+					</a>
+					<a href="https://www.nationalgeographic.com/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa2.png" alt="National Geographic" class="w-100">
+					</a>
+					<a href="https://www.coca-cola.com.ar/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa3.png" alt="Coca Cola" class="w-100">
+					</a>
+					<a href="https://www.hbomax.com/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa4.png" alt="HBO max" class="w-100">
+					</a>
 				</div>
 			</div>
-			<div class="footer__contact">
-				<h3 class="contact__h3">Redes sociales</h3>
-				<div class="footer__links">
-					<a href="https://www.instagram.com/nico_piccioni/" target="_blank" class="contact__link">Instagram</a>
-					<a href="#" class="contact__link">Facebook</a>
+			<div class="Contact">
+				<h3 class="fs-5 p-0 mb-1 footer__h3">Redes sociales</h3>
+				<div>
+					<a href="https://www.instagram.com/nico_piccioni/" target="_blank" class="ps-2 Contact__link">Instagram</a>
+					<a href="#" class="ps-2 Contact__link">Facebook</a>
 				<div>
 			</div>
 		</section>
 	</footer>
+
+	<!-- End Footer -->
+
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>

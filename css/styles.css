@@ -7,267 +7,117 @@
 	box-sizing: border-box;
 }
 
-/* GRID LAYOUT PARA EL INDEX.HTML SOLAMENTE */
 
-.body{
-	display: grid;
-	grid-template-rows: 76px repeat(3, auto);
-	grid-template-columns: 100%;
-	grid-template-areas: 
-		"header header" 
-		"main main"
-		"aside aside" 
-		"footer footer";
+/* #9FF989
+#B6FAA5
+#0E3687
+#1176D5
+#72DFFD
+#F7FBF6 */
+
+/* Nav */
+
+#botonera{
+	background-color: #9FF989;
+}
+
+	#botonera img{
+		width: 150px;
 	}
 
-.headerGrid{
-	grid-area: header;
+		#botonera li a{
+			font-size: 1.2rem;
+			color: #1176D5;
+		}
 
-	width: 100%;
-	position: fixed;
+		#botonera li a:hover, #botonera li a:active{
+			color: #72DFFD;
 
-	z-index: 1;
-}
+			text-shadow: 2px 2px black;
+			text-transform: uppercase;
+		}
 
-.mainGrid{
-	grid-area: main;
-}
+/* Footer */
 
-.asideGrid{
-	grid-area: aside;
-}
-
-.footerGrid{
-	grid-area: footer;
-
+.footer{
 	background-image: url(../img/footer.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
-/* GRID LAYOUT PARA TODOS LOS .HTML (MENOS PARA EL INDEX) */
-
-.body2{
-	display: grid;
-	grid-template-rows: 76px repeat(2, auto);
-	grid-template-columns: 100%;
-	grid-template-areas: 
-		"header header" 
-		"main main" 
-		"footer footer";
-}
-
-.main{
-	grid-area: main;
-}
-
-/* NAVEGACIÓN --> (PARA TODOS LOS HTML POR IGUAL) MOBILE FIRST */
-
-.btn__menu{
-	display: inline-flex;
-}
-
-.menu{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	padding: 10px 16px;
-
-	background-color: #9FF989;
-}
-
-.menu__logo{
-	max-width: 10rem;
-}
-
-.menu__items{
-	position: fixed;
-	width: 100vw;
-	background-color: #9FF989;
-	top: -100vh;
-	text-align: center;
-
-	margin: 20px 0 0 0;
-	
-	line-height: 50px;
-	list-style: none;
-}
-
-.menu__items li a{
-	font-size: 1.2rem;
-	text-decoration: none;
-	color: #1176D5;
-}
-
-.menu__items a:hover, .menu__items a:active{
-	color: #72DFFD;
-	font-size: 1.4em;
-
-	text-shadow: 2px 2px black;
-	text-transform: uppercase;
-}
-
-ul.show{
-	top: 57px;
-	right: 0px;
-}
-
-.btn__menu{
-	font-size: 2rem;
-	color: #1176D5;
-	cursor: pointer;
-}
-
-/* FOOTER --> (PARA TODOS LOS HTML POR IGUAL) MOBILE FIRST */
-
-.footer__title{
-	text-align: center;
-	letter-spacing: 2px;
-	font-size: 1rem;
-
-	padding: 6px;
-
+.footer h2{
 	color: #1176D5;
 	background-color: #9FF989;
 }
 
-.contact__h3{
-	text-align: center;
-	font-size: .8rem;
-	letter-spacing: 3px;
+.footer__h3{
 	color: #F7FBF6;
 }
 
-.footer__links{
-	display: flex;
-	justify-content: center;
-}
-
-.footer__img{
-	width: 100%;
-}
-
-.footer__img:hover{
+.footer img:hover{
 	border: 2px solid #fff;
 	border-radius: 10px;
 }
 
-.contact__link{
-	padding: 0px 10px 2px;
-
+.Contact__link{
 	color: #fff;
-	font-size: .6rem;
 	text-decoration: none;
 }
 
-.contact__link:hover{
+.Contact__link:hover{
 	text-decoration: line-through;
 	color: red;
 }
 
-/* MAIN --> (INDEX.HTML) MOBILE FIRST */
+/* Main (Index.html) */
 
-.main__content{
+.MainCarousel{
+	margin-top: 76px;
+}
+
+#MainBg{
 	background-image: url(../img/mainbg.jpg);
 	background-size: cover;
 	background-position: center;
-
-	padding: 16px;
 }
 
-.main__contentDiv{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	#MainBg	p{
+		background-image: url(../img/main__p.jpg);
+		background-size: cover;
+		background-position: center;
+
+		border-radius: 10px;
+		color: #fff;
+		text-shadow: 1px 2px #000;
+	}
+
+.Sectionbg{
+	background-color: #9FF989;
 }
 
-.maincontentDiv--show{
-	display: none;
+	.Sectionbg h1{
+		color: #1176D5;
+		letter-spacing: 2px;
+	}
+
+	.Sectionbg h2{
+		letter-spacing: 2px;
+	}
+
+/* Main (protagonistas.html) */
+
+.mainMt{
+	margin-top: 76px;
+	height: auto;
 }
 
-.main_contentParrafe{
-	padding: 10px;
-	border-radius: 10px;
-	margin-top: 10px;
-
-	background-image: url(../img/main__p.jpg);
+.prot{
+	background-image: url(../img/Protagonistasbg.png);
 	background-size: cover;
 	background-position: center;
 
-	color: #fff;
-	text-shadow: 1px 2px black;
+	height: auto;
 }
-
-.main__contentDiv iframe{
-	width: 100%;
-}
-
-/* MAIN SEGUNDA SECCIÓN --> (INDEX.HTML) MOBILE FIRST */
-
-.content2{
-	background-color: #9FF989;
-	text-align: center;
-
-	padding: 6px 2px;
-}
-
-.content2__title{
-	letter-spacing: 2px;
-	font-size: 1rem;
-	color: #1176D5;
-}
-
-.content2__subtitle{
-	letter-spacing: 2px;
-	font-size: .8rem;
-	color: #fff;
-	text-shadow: 1px 2px black;
-}
-
-.content2__div{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	background: linear-gradient(to bottom, #9FF989, #0E3687);
-}
-
-.content2__img{
-	width: 250px;
-	height: 250px;
-
-	margin: 8px;
-	border-radius: 8px;
-
-	flex-grow: 1;
-}
-
-
-/* ASIDE --> (INDEX.HTML) MOBILE FIRST */
-
-.asideGrid{
-	background: linear-gradient(to top, #9FF989, #0E3687);
-
-	border-width: 0 0;
-	border-style: solid;
-	border-color: #0E3687;
-	padding: 12px;
-}
-
-.asideSection{
-	height: 100%;
-
-	display: flex;
-	justify-content: space-around;
-}
-
-.asideGrid img{
-	max-width: 30%;
-	opacity: .9;
-}
-
-/* MAIN --> (PROTAGONISTAS.HTML) MOBILE FIRST */ /* << ------ >> */ /* Gallery = galeria.html (Para ahorrar código)*/
 
 .prot__title, .gallery__title{
 	background-image: url(../img/protagonistas.jpg);
@@ -275,45 +125,30 @@ ul.show{
 	background-position: center;
 
 	color: #F7FBF6;
-	text-align: center;
-	font-size: 1rem;
 	letter-spacing: 4px;
-	padding: 6px;
 
 	text-shadow: 1px 2px #000;
 
 }
 
-.prot__article{
-	background-image: url(../img/Protagonistasbg.png);
-	background-size: cover;
-	background-position: center;
-}
-
-.protDiv picture{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 .prot__name{
-	width: 100%;
-	position: sticky;
-	top: 4.5rem;
-
 	padding: 4px;
 	background-color: #9FF989;
-	text-align: center;
 }
 
 .prot__img{
 	width: 120px;
-	margin: 8px 8px;
-	border-radius: 50%;
+	margin: 8px;
 
 	animation-name: movement;
 	animation-iteration-count: 1;
 	animation-duration: 1.4s;
+}
+
+.prot__text{
+	width: 90%;
+	padding: 8px;
+	color: #fff;
 }
 
 @keyframes movement{
@@ -327,316 +162,59 @@ ul.show{
 
 }
 
-.prot__text{
-	display: inline-block;
-	width: 90%;
+/* Main (galeria.html) */
 
-	padding: 8px 0;
-	vertical-align: 1rem;
-	color: #fff;
+.gallery__img{
+	margin: 10px;
 }
 
-/* MAIN --> (EPISODIOS.HTML) MOBILE FIRST */
+/* Main (episodios.html) */
 
-.caps{
-	overflow: auto;
-
+.Section__Tablebg{
 	background-image: url(../img/episodios.jpg);
 	background-size: cover;
 	background-position: top;
 
 	padding: 20px 0;
+	overflow-x: auto;
 }
 
-.table{
-	height: 250px;
-	border: 1px solid #000;
-
-	background-color: #BEEF25;
+#Tablebg{
+	background: linear-gradient(to top, #BEEF25, #193E0D);
 }
 
-.table th{
-	padding: 10px;
-
-	letter-spacing: 2px;
+#Tablebg2{
+	background: linear-gradient(to bottom, #BEEF25, #9FF989);
 }
 
-.table td{
-	padding: 4px;
-	border-radius: 2px;
-
-	text-align: center;	
-}
-
-/* MAIN --> (GALERIA.HTML) MOBILE FIRST */
-
-.gallery{
-	background-color: #BCEFB0;
-}
-
-.galleryFlex{
-	display: flex;
-
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.gallery__img{
-	width: 250px;
-	height: 200px;
-	margin: 10px 10px;
-
-	flex-shrink: 1;
-	border-radius: 16px;
-}
-
-.gallery__img:hover{
-	outline: 2px solid #fff;
-
-	transform: scale(1.08);
-	transition: transform .6s;
-}
-
-/* MAIN --> (CONTACTO.HTML) MOBILE FIRST */
+/* Main (contacto.html) */
 
 .formulario{
-	padding: 20px;
-
 	background-image: url(../img/formbg.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
-.form__fieldset{
-	border: 2px solid whitesmoke;
-	padding: 10px;
+.form__bg{
+	background-color: #9FF989;
+	border: 1px solid #000;
 }
 
-.formulario__title{
-	color: #1176D5;
-
-	font-size: .9rem;
-	margin-left: 10px;
+.form__bg:focus{
+	background-color: #9FF989;
 }
 
-.formulario__input{
-	display: block;
-	height: 3rem;
-	width: 100%;
-
-	margin: 16px auto;
-
-	background-color: #B6FAA5;
-}
-
-.edit{
+#exampleInputTextarea{
 	resize: none;
-	width: 100%;
-	height: 200px;
 }
 
-.formulario__input:focus{
-	outline: none;
-}
+/* --------------------------------------------------- MEDIA QUERIE "LG" --------------------------------------------------- */
 
-/* --------------------------------------------{ @MEDIA QUERIE PARA TABLET }-------------------------------------------- */
+/* Main (Index.html) */
 
-@media screen and (min-width: 768px){
+@media (min-width: 992px){
 
-/* FOOTER --> (PARA TODOS LOS HTML POR IGUAL) TABLET */
-
-	.footer__title{
-		font-size: 1.6rem;
+	.Main{
+		margin-top: 76px;
 	}
-
-	.contact__h3{
-		font-size: 1.2rem;
-	}
-
-	.contact__link{
-		font-size: .8rem;
-	}
-
-/* MAIN --> (PARA TODOS LOS HTML POR IGUAL) TABLET */
-
-	.main__contentDiv iframe{
-		width: 80%;
-	}
-
-	.main_contentParrafe{
-		width: 60%;
-	}
-
-/* MAIN SEGUNDA SECCIÓN--> (PARA TODOS LOS HTML POR IGUAL) TABLET */
-
-	.content2__title{
-		font-size: 1.8rem;
-	}
-
-	.content2__subtitle{
-		letter-spacing: 4px;
-		font-size: 1rem;
-	}
-
-/* MAIN --> (PROTAGONISTAS.HTML) TABLET */ /* << ------ >> */ /* Gallery = galeria.html (Para ahorrar código)*/
-
-	.prot__title, .gallery__title{
-		font-size: 1.6rem;
-	}
-
-	.protDiv picture{
-		flex-direction: row;
-	}
-
-/* MAIN --> (EPISODIOS.HTML) TABLET */
-	
-	.caps{
-		padding: 20px;
-
-		display: flex;
-		justify-content: center;
-	}
-
-/* MAIN --> (GALERIA.HTML) TABLET */
-
-	.galleryFlex{
-		display: flex;
-
-		flex-wrap: no-wrap;
-	}
-
-	.gallery__img{
-		width: 30%;
-		flex-shrink: 0;
-		border-radius: 16px;
-	}
-
-/* MAIN --> (CONTACTO.HTML) TABLET */
-
-	.formulario__title{
-		color: #1176D5;
-
-		font-size: 1.2rem;
-		margin-left: 6px;
-	}
-
-	.formularioNE{
-		display: inline-block;
-	}
-
-	.formularioNE{
-		width: 100%;
-		text-align: center;
-	}
-
-	.formulario__input{
-		width: 250px;
-	}
-
-	.inputEDIT{
-		display: inline-block;
-		margin-left: 10px;
-	}
-
-	.edit{
-		resize: none;
-		width: 50%;
-		height: 200px;
-	}
-
-}
-
-/* --------------------------------------------{ @MEDIA QUERIE PARA DESKTOP }-------------------------------------------- */
-
-@media screen and (min-width: 1024px){
-
-/* GRID LAYOUT PARA INDEX.HTML (ÚNICO QUE CONTIENE "ASIDE") LOS DEMÁS NO TIENEN NECESIDAD DE GRID */
-
-	.body{
-		grid-template-rows: 76px repeat(2, auto);
-		grid-template-columns: 90% 10%;
-		grid-template-areas: "header header" "main aside" "footer footer";
-	}
-
-/* NAVEGACIÓN --> (PARA TODOS LOS HTML POR IGUAL) DESKTOP */
-
-	.btn__menu{
-		display: none;
-	}
-
-	.menu__items{
-		display: flex;
-		position: static;
-
-		width: auto;
-		margin: 0;
-		
-		line-height: 1;
-	}
-
-	.menu__items li a{
-		display: inline-block;
-		margin-right: 16px;
-
-		font-size: 1.3rem;
-	}
-
-	ul.show{
-		top: 0;
-	}
-
-/* MAIN --> (INDEX.HTML) DESKTOP */
-
-	.main__contentDiv{
-		flex-direction: row;
-		justify-content: space-around;
-	}
-
-	.maincontentDiv--show{
-		display: flex;
-	}
-
-	.main__contentDiv{
-		padding: 20px;
-	}
-
-	.main_contentParrafe{
-		width: 40%;
-	}
-
-	.main__contentDiv iframe{
-		width: 50%;
-	}
-
-/* MAIN SEGUNDA SECCIÓN --> (INDEX.HTML) DESKTOP */
-
-	.content2__div{
-		background: linear-gradient(to left, #0E3687, #9FF989);
-	}
-
-/* ASIDE --> (INDEX.HTML) DESKTOP */
-
-	.asideSection{
-		flex-direction: column;
-		justify-content: space-around;
-	}
-
-	.asideGrid{
-		background: linear-gradient(to bottom, #9FF989, #0E3687, #9FF989);
-
-		border-width: 0px 3px;
-		border-style: solid;
-		border-color: #9FF989;
-	}
-
-	.asideGrid img{
-		max-width: 100%;
-	}
-
-/* MAIN --> (PROTAGONISTAS.HTML) DESKTOP */  
-
-	.prot__name{
-		text-align: left;
-	}
-
 }

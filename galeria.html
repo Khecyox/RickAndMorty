@@ -4,69 +4,104 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Galería</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- My Css -->
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="https://kit.fontawesome.com/bc28818a66.js" crossorigin="anonymous"></script>
-	<script src="js/app.js" defer></script>
 
+	<!-- <script src="https://kit.fontawesome.com/bc28818a66.js" crossorigin="anonymous"></script>
+	<script src="js/app.js" defer></script> -->
 </head>
-<body class="body2">
+<body>
 
-	<header class="headerGrid">
-			<nav class="menu">
-				<a href="index.html">
-					<img src="img/logo.png" class="menu__logo" alt="Logo Rick and Morty">
-				</a>
-				<ul class="menu__items">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="protagonistas.html">Protagonistas</a></li>
-					<li><a href="episodios.html">Episodios</a></li>
-					<li><a href="galeria.html">Galería</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
-				</ul>
-				<span class="btn__menu">
-					<i class="fa fa-bars"></i>
-				</span>
-			</nav>
+	<!-- Nav -->
+	
+	<header class="fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light" id="botonera">
+		  	<div class="container-fluid">
+		    	<a class="navbar-brand" href="#">
+		    		<img src="img/Logo.png" alt="Rock & Roll">
+		    	</a>
+		    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      		<span class="navbar-toggler-icon"></span>
+		    	</button>
+		    	<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+		      	<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+		      		<li class="nav-item">
+		          		<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link active" aria-current="page" href="protagonistas.html">Protagonistas</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link" href="galeria.html">Galería</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link" href="episodios.html">Episodios</a>
+		        	</li>
+		        	<li class="nav-item">
+		          		<a class="nav-link" href="contacto.html">Contacto</a>
+		        	</li>
+		    	</div>
+		  	</div>
+		</nav>
 	</header>
 
-	<main class="main">
-		<section class="gallery">
-			<h2 class="gallery__title">Galería de imagenes</h2>
-			<div class="galleryFlex">
-				<img class="gallery__img" src="img/Gallery1.jpg" alt="Rick y Morty perdidos">
-				<img class="gallery__img" src="img/Gallery2.png" alt="Rick y Morty Swag">
-				<img class="gallery__img" src="img/Gallery3.jpg" alt="Familia Sanchez vs Extraterrestres">
-				<img class="gallery__img" src="img/Gallery4.jpg" alt="Rick y Morty vs Extraterrestres Parte 2">
-				<img class="gallery__img" src="img/Gallery5.jpg" alt="Rick y Morty en otro planeta">
-				<img class="gallery__img" src="img/Gallery6.jpg" alt="Rick y Morty en las profundidades del oceano">
-				<img class="gallery__img" src="img/Gallery7.jpg" alt="Rick y Morty de after">
-				<img class="gallery__img" src="img/Gallery8.png" alt="Rick y Morty Breaking Bad">
-				<img class="gallery__img" src="img/Gallery9.jpg" alt="Rick y Morty viajando por el espacio">
+	<!-- End Nav -->
+
+	<main class="mainMt">
+		<section class="gallery w-100">
+			<h2 class="text-center fs-3 m-0 p-2 gallery__title w-100">Galería de imagenes</h2>
+			<div class="row w-100 m-0">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery1.jpg" alt="Rick y Morty perdidos">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery2.png" alt="Rick y Morty Swag">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery3.jpg" alt="Familia Sanchez vs Extraterrestres">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery4.jpg" alt="Rick y Morty vs Extraterrestres Parte 2">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery5.jpg" alt="Rick y Morty en otro planeta">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery6.jpg" alt="Rick y Morty en las profundidades del oceano">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery7.jpg" alt="Rick y Morty de after">
+				<img class="col-12 col-md-6 col-lg-4 m-0 p-0 gallery__img" src="img/Gallery8.png" alt="Rick y Morty Breaking Bad">
+				<img class="col-12 d-md-none d-lg-inline col-lg-4 m-0 p-0 gallery__img" src="img/Gallery9.jpg" alt="Rick y Morty viajando por el espacio">
 			</div>
 		</section>
 	</main>
 
-	<footer class="footerGrid">
-		<h2 class="footer__title">Afiliados & Redes Sociales</h2>
-		<section class="footer__section">
-			<div class="footer__contact">
-				<h3 class="contact__h3 contact__h3--margin">Empresas afiliadas</h3>
-				<div class="footer__links">
-					<a href="https://www.hostinger.com/" target="_blank"><img src="img/Empresa1.png" class="footer__img" alt="Hostinger"></a>
-					<a href="https://www.nationalgeographic.com/" target="_blank"><img src="img/Empresa2.png" class="footer__img" alt="National Geographic"></a>
-					<a href="https://www.coca-cola.com.ar/" target="_blank"><img src="img/Empresa3.png" class="footer__img" alt="Coca Cola"></a>
-					<a href="https://www.hbomax.com/" target="_blank"><img src="img/Empresa4.png" class="footer__img" alt="HBO max"></a>
+	<!-- Footer -->
+
+	<footer class="text-center footer">
+		<h2 class="fs-3 p-1">Afiliados & Redes Sociales</h2>
+		<section>
+			<div>
+				<h3 class="fs-5 mb-1 p-0 footer__h3">Empresas afiliadas</h3>
+				<div class="row d-flex justify-content-center w-100">
+					<a href="https://www.hostinger.com/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa1.png" alt="Hostinger" class="w-100">
+					</a>
+					<a href="https://www.nationalgeographic.com/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa2.png" alt="National Geographic" class="w-100">
+					</a>
+					<a href="https://www.coca-cola.com.ar/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa3.png" alt="Coca Cola" class="w-100">
+					</a>
+					<a href="https://www.hbomax.com/" target="_blank" class="col-3 col-lg-2">
+						<img src="img/Empresa4.png" alt="HBO max" class="w-100">
+					</a>
 				</div>
 			</div>
-			<div class="footer__contact">
-				<h3 class="contact__h3">Redes sociales</h3>
-				<div class="footer__links">
-					<a href="https://www.instagram.com/nico_piccioni/" target="_blank" class="contact__link">Instagram</a>
-					<a href="#" class="contact__link">Facebook</a>
+			<div class="Contact">
+				<h3 class="fs-5 p-0 mb-1 footer__h3">Redes sociales</h3>
+				<div>
+					<a href="https://www.instagram.com/nico_piccioni/" target="_blank" class="ps-2 Contact__link">Instagram</a>
+					<a href="#" class="ps-2 Contact__link">Facebook</a>
 				<div>
 			</div>
 		</section>
 	</footer>
+
+	<!-- End Footer -->
+
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
