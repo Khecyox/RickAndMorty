@@ -71,10 +71,6 @@
 
 /* Main (Index.html) */
 
-.MainCarousel{
-	margin-top: 76px;
-}
-
 #MainBg{
 	background-image: url(../img/mainbg.jpg);
 	background-size: cover;
@@ -104,20 +100,7 @@
 		letter-spacing: 2px;
 	}
 
-/* Main (protagonistas.html) */
-
-.mainMt{
-	margin-top: 76px;
-	height: auto;
-}
-
-.prot{
-	background-image: url(../img/Protagonistasbg.png);
-	background-size: cover;
-	background-position: center;
-
-	height: auto;
-}
+/* MAIN --> (PROTAGONISTAS.HTML) MOBILE FIRST */
 
 .prot__title, .gallery__title{
 	background-image: url(../img/protagonistas.jpg);
@@ -125,30 +108,46 @@
 	background-position: center;
 
 	color: #F7FBF6;
+	text-align: center;
+	font-size: 1rem;
 	letter-spacing: 4px;
+	padding: 6px;
 
 	text-shadow: 1px 2px #000;
 
 }
 
+.prot__article{
+	background-image: url(../img/Protagonistasbg.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.protDiv picture{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .prot__name{
+	width: 100%;
+	position: sticky;
+	top: 4.5rem;
+
 	padding: 4px;
 	background-color: #9FF989;
+	text-align: center;
+	font-size: 1.2rem;
 }
 
 .prot__img{
 	width: 120px;
-	margin: 8px;
+	margin: 8px 8px;
+	border-radius: 50%;
 
 	animation-name: movement;
 	animation-iteration-count: 1;
 	animation-duration: 1.4s;
-}
-
-.prot__text{
-	width: 90%;
-	padding: 8px;
-	color: #fff;
 }
 
 @keyframes movement{
@@ -162,29 +161,51 @@
 
 }
 
+.prot__text{
+	display: inline-block;
+	width: 90%;
+
+	padding: 8px;
+	vertical-align: 1rem;
+	color: #fff;
+}
+
 /* Main (galeria.html) */
 
 .gallery__img{
 	margin: 10px;
 }
 
-/* Main (episodios.html) */
+/* Main --> (episodios.html) */
 
-.Section__Tablebg{
+.caps{
+	overflow: auto;
+
 	background-image: url(../img/episodios.jpg);
 	background-size: cover;
 	background-position: top;
 
-	padding: 20px 0;
-	overflow-x: auto;
+	padding: 50px 0;
 }
 
-#Tablebg{
-	background: linear-gradient(to top, #BEEF25, #193E0D);
+.table{
+	height: 300px;
+	border: 2px solid #000;
+
+	background: linear-gradient(to top, #9FF989, #3E6335);
 }
 
-#Tablebg2{
-	background: linear-gradient(to bottom, #BEEF25, #9FF989);
+.table th{
+	padding: 10px;
+	color: #DCFFD3;
+
+	letter-spacing: 2px;
+}
+
+.table td{
+	padding: 4px;
+
+	text-align: center;	
 }
 
 /* Main (contacto.html) */
@@ -208,13 +229,37 @@
 	resize: none;
 }
 
-/* --------------------------------------------------- MEDIA QUERIE "LG" --------------------------------------------------- */
 
-/* Main (Index.html) */
+/* --------------------------------------------{ @MEDIA QUERIE PARA TABLET }-------------------------------------------- */
 
-@media (min-width: 992px){
+/* MAIN --> (PROTAGONISTAS.HTML) TABLET */ 
 
-	.Main{
-		margin-top: 76px;
+@media screen and (min-width: 768px){
+
+	.prot__title, .gallery__title{
+		font-size: 1.6rem;
 	}
+
+	.protDiv picture{
+		flex-direction: row;
+	}
+
+/* Main --> (episodios.html) TABLET*/
+
+.caps{
+	display: flex;
+	justify-content: center;
+
+}
+
+/* --------------------------------------------{ @MEDIA QUERIE PARA DESKTOP }-------------------------------------------- */
+
+@media screen and (min-width: 1024px){
+
+/* MAIN --> (PROTAGONISTAS.HTML) DESKTOP */  
+
+	.prot__name{
+		text-align: left;
+	}
+
 }
