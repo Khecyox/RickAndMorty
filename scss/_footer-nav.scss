@@ -1,0 +1,52 @@
+// NAVBAR 
+
+#botonera{
+    background-color: $maincolor;
+
+    img{
+		width: 150px;
+	}
+
+    li a{
+        font-size: 1.2rem;
+		color: $textcolor;
+        &:hover, &:active{
+            color: $textcolor2;
+			text-shadow: 2px 2px black;
+			text-transform: uppercase;
+        }
+    }
+}
+
+// FOOTER
+
+.footer{
+	background-image: url(../img/footer.jpg);
+	background-size: cover;
+	background-position: bottom;
+    
+    h2{
+        color: $textcolor;
+	    background-color: $maincolor;
+    }
+
+    h3{
+        color: $secondarytextcolor;
+    }
+
+    img:hover{
+        border: 2px solid #fff;
+	    border-radius: 10px;
+    }
+
+    .Contact__link{
+        color: #fff;
+        text-decoration: none;
+    
+        &:hover{
+            text-decoration: line-through;
+            color: red;
+        }
+    }
+}
+

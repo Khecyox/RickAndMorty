@@ -1,265 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&family=Roboto:wght@300;500&display=swap');
-
-*{
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;;
-	box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&family=Roboto:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-
-/* #9FF989
-#B6FAA5
-#0E3687
-#1176D5
-#72DFFD
-#F7FBF6 */
-
-/* Nav */
-
-#botonera{
-	background-color: #9FF989;
+#botonera {
+  background-color: #9FF989;
+}
+#botonera img {
+  width: 150px;
+}
+#botonera li a {
+  font-size: 1.2rem;
+  color: #1176D5;
+}
+#botonera li a:hover, #botonera li a:active {
+  color: #72DFFD;
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;
 }
 
-	#botonera img{
-		width: 150px;
-	}
-
-		#botonera li a{
-			font-size: 1.2rem;
-			color: #1176D5;
-		}
-
-		#botonera li a:hover, #botonera li a:active{
-			color: #72DFFD;
-
-			text-shadow: 2px 2px black;
-			text-transform: uppercase;
-		}
-
-/* Footer */
-
-.footer{
-	background-image: url(../img/footer.jpg);
-	background-size: cover;
-	background-position: bottom;
+.footer {
+  background-image: url(../img/footer.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+.footer h2 {
+  color: #1176D5;
+  background-color: #9FF989;
+}
+.footer h3 {
+  color: #F7FBF6;
+}
+.footer img:hover {
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.footer .Contact__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .Contact__link:hover {
+  text-decoration: line-through;
+  color: red;
 }
 
-.footer h2{
-	color: #1176D5;
-	background-color: #9FF989;
+#MainBg {
+  background-image: url(../img/mainbg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#MainBg p {
+  background-image: url(../img/main__p.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  color: #fff;
+  text-shadow: 1px 2px #000;
 }
 
-.footer__h3{
-	color: #F7FBF6;
+.Sectionbg {
+  background-color: #9FF989;
+}
+.Sectionbg h1 {
+  color: #1176D5;
+  letter-spacing: 2px;
+}
+.Sectionbg h2 {
+  letter-spacing: 2px;
 }
 
-.footer img:hover{
-	border: 2px solid #fff;
-	border-radius: 10px;
+.prot__title, .gallery__title {
+  background-image: url(../img/protagonistas.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #F7FBF6;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  padding: 6px;
+  text-shadow: 1px 2px #000;
 }
 
-.Contact__link{
-	color: #fff;
-	text-decoration: none;
+.prot__article {
+  background-image: url(../img/Protagonistasbg.png);
+  background-size: cover;
+  background-position: center;
+}
+.prot__article h3 {
+  width: 100%;
+  position: sticky;
+  top: 4.5rem;
+  padding: 4px;
+  background-color: #9FF989;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.prot__article picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prot__article picture img {
+  width: 120px;
+  margin: 8px 8px;
+  border-radius: 50%;
+  animation-name: movement;
+  animation-iteration-count: 1;
+  animation-duration: 1.4s;
+}
+@keyframes movement {
+  0% {
+    transform: translateX(-450px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.prot__article picture p {
+  display: inline-block;
+  width: 90%;
+  padding: 8px;
+  vertical-align: 1rem;
+  color: #fff;
 }
 
-.Contact__link:hover{
-	text-decoration: line-through;
-	color: red;
+.caps {
+  overflow: auto;
+  background-image: url(../img/episodios.jpg);
+  background-size: cover;
+  background-position: top;
+  padding: 50px 0;
+}
+.caps table {
+  height: 300px;
+  border: 2px solid #000;
+  background: linear-gradient(to top, #9FF989, #3E6335);
+}
+.caps table th {
+  padding: 10px;
+  color: #DCFFD3;
+  letter-spacing: 2px;
+}
+.caps table td {
+  padding: 4px;
+  text-align: center;
 }
 
-/* Main (Index.html) */
-
-#MainBg{
-	background-image: url(../img/mainbg.jpg);
-	background-size: cover;
-	background-position: center;
+.formulario {
+  background-image: url(../img/formbg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.formulario .form__bg {
+  background-color: #9FF989;
+  border: 1px solid #000;
+}
+.formulario .form__bg:focus {
+  background-color: #9FF989;
+}
+.formulario textarea {
+  resize: none;
 }
 
-	#MainBg	p{
-		background-image: url(../img/main__p.jpg);
-		background-size: cover;
-		background-position: center;
+@media screen and (min-width: 768px) {
+  .prot__title, .gallery__title {
+    font-size: 1.6rem;
+  }
 
-		border-radius: 10px;
-		color: #fff;
-		text-shadow: 1px 2px #000;
-	}
+  .protDiv picture {
+    flex-direction: row;
+  }
 
-.Sectionbg{
-	background-color: #9FF989;
+  .caps {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .protDiv h3 {
+    text-align: left;
+  }
 }
 
-	.Sectionbg h1{
-		color: #1176D5;
-		letter-spacing: 2px;
-	}
-
-	.Sectionbg h2{
-		letter-spacing: 2px;
-	}
-
-/* MAIN --> (PROTAGONISTAS.HTML) MOBILE FIRST */
-
-.prot__title, .gallery__title{
-	background-image: url(../img/protagonistas.jpg);
-	background-size: cover;
-	background-position: center;
-
-	color: #F7FBF6;
-	text-align: center;
-	font-size: 1rem;
-	letter-spacing: 4px;
-	padding: 6px;
-
-	text-shadow: 1px 2px #000;
-
-}
-
-.prot__article{
-	background-image: url(../img/Protagonistasbg.png);
-	background-size: cover;
-	background-position: center;
-}
-
-.protDiv picture{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.prot__name{
-	width: 100%;
-	position: sticky;
-	top: 4.5rem;
-
-	padding: 4px;
-	background-color: #9FF989;
-	text-align: center;
-	font-size: 1.2rem;
-}
-
-.prot__img{
-	width: 120px;
-	margin: 8px 8px;
-	border-radius: 50%;
-
-	animation-name: movement;
-	animation-iteration-count: 1;
-	animation-duration: 1.4s;
-}
-
-@keyframes movement{
-	0%{
-		transform: translateX(-450px);
-	}
-
-	100%{
-		transform: translateX(0);
-	}
-
-}
-
-.prot__text{
-	display: inline-block;
-	width: 90%;
-
-	padding: 8px;
-	vertical-align: 1rem;
-	color: #fff;
-}
-
-/* Main (galeria.html) */
-
-.gallery__img{
-	margin: 10px;
-}
-
-/* Main --> (episodios.html) */
-
-.caps{
-	overflow: auto;
-
-	background-image: url(../img/episodios.jpg);
-	background-size: cover;
-	background-position: top;
-
-	padding: 50px 0;
-}
-
-.table{
-	height: 300px;
-	border: 2px solid #000;
-
-	background: linear-gradient(to top, #9FF989, #3E6335);
-}
-
-.table th{
-	padding: 10px;
-	color: #DCFFD3;
-
-	letter-spacing: 2px;
-}
-
-.table td{
-	padding: 4px;
-
-	text-align: center;	
-}
-
-/* Main (contacto.html) */
-
-.formulario{
-	background-image: url(../img/formbg.jpg);
-	background-size: cover;
-	background-position: center;
-}
-
-.form__bg{
-	background-color: #9FF989;
-	border: 1px solid #000;
-}
-
-.form__bg:focus{
-	background-color: #9FF989;
-}
-
-#exampleInputTextarea{
-	resize: none;
-}
-
-
-/* --------------------------------------------{ @MEDIA QUERIE PARA TABLET }-------------------------------------------- */
-
-/* MAIN --> (PROTAGONISTAS.HTML) TABLET */ 
-
-@media screen and (min-width: 768px){
-
-	.prot__title, .gallery__title{
-		font-size: 1.6rem;
-	}
-
-	.protDiv picture{
-		flex-direction: row;
-	}
-
-/* Main --> (episodios.html) TABLET*/
-
-.caps{
-	display: flex;
-	justify-content: center;
-
-}
-
-/* --------------------------------------------{ @MEDIA QUERIE PARA DESKTOP }-------------------------------------------- */
-
-@media screen and (min-width: 1024px){
-
-/* MAIN --> (PROTAGONISTAS.HTML) DESKTOP */  
-
-	.prot__name{
-		text-align: left;
-	}
-
-}
+/*# sourceMappingURL=styles.css.map */

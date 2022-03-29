@@ -1,0 +1,35 @@
+// Media querie Tablet
+
+@media screen and (min-width: 768px){
+
+    // Main (protagonistas.html)
+
+	.prot__title, .gallery__title{
+		font-size: 1.6rem;
+	}
+
+	.protDiv picture{
+		flex-direction: row;
+	}
+
+// Main (episodios.html)
+
+    .caps{
+	    display: flex;
+	    justify-content: center;
+
+    }
+
+}
+
+// Media querie Desktop
+
+@media screen and (min-width: 1024px){
+
+    // Main (protagonistas.html) 
+    
+        .protDiv h3{
+            text-align: left;
+        }
+    
+}
