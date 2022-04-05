@@ -1,7 +1,7 @@
 // NAVBAR 
 
 #botonera{
-    background-color: $maincolor;
+    background-color: map-get($map:$paleta, $key:'maincolor');
 
     img{
 		width: 150px;
@@ -9,9 +9,9 @@
 
     li a{
         font-size: 1.2rem;
-		color: $textcolor;
+		color: map-get($map:$paleta, $key:'textcolor');
         &:hover, &:active{
-            color: $textcolor2;
+            color: map-get($map:$paleta, $key:'textcolor2');
 			text-shadow: 2px 2px black;
 			text-transform: uppercase;
         }
@@ -21,17 +21,15 @@
 // FOOTER
 
 .footer{
-	background-image: url(../img/footer.jpg);
-	background-size: cover;
-	background-position: bottom;
+    @include pic(url(../img/footer.jpg), cover, bottom);
     
     h2{
-        color: $textcolor;
-	    background-color: $maincolor;
+        color: map-get($map:$paleta, $key:'textcolor');
+	    background-color: map-get($map:$paleta, $key:'maincolor');
     }
 
     h3{
-        color: $secondarytextcolor;
+        color: map-get($map:$paleta, $key:'secondarytextcolor');
     }
 
     img:hover{
@@ -40,7 +38,7 @@
     }
 
     .Contact__link{
-        color: #fff;
+        color: map-get($map:$neutralcolors, $key:'white');
         text-decoration: none;
     
         &:hover{

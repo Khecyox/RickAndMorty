@@ -1,27 +1,23 @@
 // MAIN (index.html) 
 
 #MainBg{
-	background-image: url(../img/mainbg.jpg);
-	background-size: cover;
-	background-position: center;
+    @include pic(url(../img/mainbg.jpg), cover, center);
 
     p{
-        background-image: url(../img/main__p.jpg);
-		background-size: cover;
-		background-position: center;
+        @include pic(url(../img/main__p.jpg), cover, center);
 
 		border-radius: 10px;
-		color: #fff;
+		color: map-get($map:$neutralcolors, $key:'white');
 		text-shadow: 1px 2px #000;
     }
 
 }
 
 .Sectionbg{
-    background-color: #9FF989;
+    background-color: map-get($map:$paleta, $key:'maincolor');
 
     h1{
-        color: $textcolor;
+        color: map-get($map:$paleta, $key:'textcolor');
         letter-spacing: 2px;
     }
 
@@ -32,12 +28,10 @@
 
 // MAIN (protagonistas.html) 
 
-.prot__title, .gallery__title{
-	background-image: url(../img/protagonistas.jpg);
-	background-size: cover;
-	background-position: center;
+.prot__title{
+    @include pic(url(../img/protagonistas.jpg), cover, center);
 
-	color: #F7FBF6;
+	color: map-get($map:$paleta, $key:'secondarytextcolor');;
 	text-align: center;
 	font-size: 1rem;
 	letter-spacing: 4px;
@@ -48,9 +42,7 @@
 }
 
 .prot__article{
-	background-image: url(../img/Protagonistasbg.png);
-	background-size: cover;
-	background-position: center;
+    @include pic(url(../img/Protagonistasbg.png), cover, center);
 
     h3{
         width: 100%;
@@ -58,7 +50,7 @@
         top: 4.5rem;
         
         padding: 4px;
-        background-color: $maincolor;
+        background-color: map-get($map:$paleta, $key:'maincolor');
         text-align: center;
         font-size: 1.2rem;
     }
@@ -94,9 +86,16 @@
 
 	        padding: 8px;
 	        vertical-align: 1rem;
-	        color: #fff;
+	        color: map-get($map:$neutralcolors, $key:'white');
         }
     }
+}
+
+// MAIN (galeria.html) 
+
+.gallery__title{
+	@extend .prot__title;
+    font-size: 1.2rem;
 }
 
 // Main (episodios.html)
@@ -104,9 +103,7 @@
 .caps{
 	overflow: auto;
 
-	background-image: url(../img/episodios.jpg);
-	background-size: cover;
-	background-position: top;
+    @include pic(url(../img/episodios.jpg), cover, top);
 
 	padding: 50px 0;
 
@@ -114,7 +111,7 @@
         height: 300px;
 	    border: 2px solid #000;
 
-	    background: linear-gradient(to top, $maincolor, #3E6335);
+	    background: linear-gradient(to top, map-get($map:$paleta, $key:'maincolor'), #3E6335);
 
         th{
             padding: 10px;
@@ -132,16 +129,14 @@
 //main (contacto.html)
 
 .formulario{
-	background-image: url(../img/formbg.jpg);
-	background-size: cover;
-	background-position: center;
+    @include pic(url(../img/formbg.jpg), cover, center);
 
     .form__bg{
-        background-color: $maincolor;
+        background-color: map-get($map:$paleta, $key:'maincolor');
 	    border: 1px solid #000;
 
         &:focus{
-            background-color: #9FF989;
+            background-color: map-get($map:$paleta, $key:'maincolor');
         }
     }
 

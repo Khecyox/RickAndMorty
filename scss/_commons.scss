@@ -2,11 +2,24 @@
 
 // colores
 
-$maincolor: #9FF989;
-$maincolor2: #B6FAA5;
-$textcolor: #1176D5;
-$textcolor2: #72DFFD;
-$secondarytextcolor: #F7FBF6;
+$paleta: (
+    'maincolor': #9FF989,
+    'maincolor2': #B6FAA5,
+    'textcolor': #1176D5,
+    'textcolor2': #72DFFD,
+    'secondarytextcolor': #F7FBF6);
+
+$neutralcolors: (
+    'white': #fff,
+    'black': #000);
+
+// Mixings
+
+@mixin pic($img, $size, $position){
+    background-image: $img;
+	background-size: $size;
+	background-position: $position;
+}
 
 // Reset and font
 

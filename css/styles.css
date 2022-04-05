@@ -127,6 +127,10 @@
   color: #fff;
 }
 
+.gallery__title {
+  font-size: 1.2rem;
+}
+
 .caps {
   overflow: auto;
   background-image: url(../img/episodios.jpg);

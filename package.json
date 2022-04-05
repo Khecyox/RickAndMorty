@@ -1,7 +1,7 @@
 {
   "name": "proyecto",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fanpage de la serie Rick and Morty en donde muestro resumenes de la misma, presento los protagonistas, presento las fechas de emisión y finalización de las temporadas, comparto una serie de imagenes de la serie y dejo una sección de formulario para el usuario para que comparta sus ideas",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Khecyox/RickAndMorty.git"
   },
-  "author": "",
+  "author": "Nicolás",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Khecyox/RickAndMorty/issues"
